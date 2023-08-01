@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         app: {
+          100: '#c8c3ec',
           200: '#908CAA',
           400: '#2A273F',
           500: '#232136',
@@ -27,5 +29,5 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('tailwind-scrollbar')
-  ],
+  ]
 }

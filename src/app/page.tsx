@@ -2,19 +2,16 @@ import { RenderMD } from '@/components/RenderMD'
 
 function getData() {
   return new Promise((resolve, reject) => {
-    fetch('https://raw.githubusercontent.com/leandrosantino/prodnote/master/README.md')
+    fetch('https://raw.githubusercontent.com/GeoffSelby/tailwind-md-base/master/README.md')
       .then(data => data.text())
       .then(data => resolve(data))
       .catch(err => reject(err))
   })
 }
 
-
 export default async function Home() {
 
   const response = await getData() as string
-
-  console.log(response)
 
   return (
     <div className={`
@@ -24,7 +21,7 @@ export default async function Home() {
       overflow-x-auto
       leading-relaxed
       scrollbar
-      scrollbar-thumb-[#2B283B]
+      scrollbar-thumb-app-400
       scrollbar-track-transparent
       flex justify-center
     `}>

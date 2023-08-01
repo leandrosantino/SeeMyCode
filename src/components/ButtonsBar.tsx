@@ -2,7 +2,7 @@ import { Files, Search, Share2, Bug, Monitor, FlaskConical, User, Settings } fro
 
 
 const className = {
-  icon: 'w-full py-2 data-[select=on]:border-l-[3.5px] border-app-200 flex justify-center items-center hover:cursor-pointer hover:bg-app-400',
+  icon: 'w-full py-2 data-[select=on]:border-l-[3.5px] border-app-200 flex justify-center items-center hover:cursor-pointer hover:text-app-100 hover:border-app-100',
   iconCase: 'flex flex-col gap-3'
 }
 
