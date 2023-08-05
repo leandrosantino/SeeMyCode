@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
+import { Navbar } from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,17 +32,11 @@ export default function RootLayout({
           </header>
 
           <section className='flex-1 grid grid-cols-editor' >
-
             <ButtonsBar />
-
-            <aside
-              className='bg-app-800 h-full'
-            ></aside>
-
+            <Navbar />
             <section className='relative'>
               {children}
             </section>
-
           </section>
 
           <footer className='bg-app-400 w-full h-6 px-3 flex gap-1 justify-end items-center' >

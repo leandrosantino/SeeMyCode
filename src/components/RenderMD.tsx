@@ -10,7 +10,7 @@ export function RenderMD({ children }: { children: string }) {
     <div
       className={`
         text-slate-200
-        prose prose-blue prose-invert
+        prose prose-violet prose-invert
         prose-h1:border-b-2
         prose-h2:border-b-2
         prose-h1:border-slate-800
