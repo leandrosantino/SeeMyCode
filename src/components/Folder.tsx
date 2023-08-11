@@ -5,6 +5,7 @@ import { Folder as FolderIcon, ChevronDown, ChevronRight } from 'lucide-react'
 import { ReactNode, useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge'
 import { usePathname } from 'next/navigation'
+import { FileIcon } from './FIleIcon';
 
 interface FolderProps {
   children: ReactNode
@@ -38,7 +39,8 @@ export function Folder({ children, title, className, reference }: FolderProps) {
         className={twMerge("px-2 py-1 flex w-full items-center gap-2 hover:bg-app-400", className)}
       >
         {open ? <ChevronDown size={15} /> : <ChevronRight size={15} />}
-        <FolderIcon size={15} strokeWidth={2} />
+        {/* <FolderIcon size={15} strokeWidth={2} /> */}
+        <FileIcon size={15} src='folder-project' />
         <span>{title}</span>
       </Collapsible.Trigger>
 

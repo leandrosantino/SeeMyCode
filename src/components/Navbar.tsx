@@ -2,6 +2,8 @@ import { MoreHorizontal, FileType2 } from 'lucide-react'
 import { Folder } from './Folder'
 import { File } from './File'
 import axios from 'axios'
+import Image from 'next/image'
+import { FileIcon } from './FIleIcon'
 
 interface Project {
   default_branch: string
@@ -12,7 +14,7 @@ export async function Navbar() {
 
   const { data: projects } = await axios.get<Project[]>('https://api.github.com/users/leandrosantino/repos', {
     headers: {
-      Authorization: 'Bearer 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'
+      Authorization: 'Bearer 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'
     }
   })
 
@@ -31,12 +33,15 @@ export async function Navbar() {
         <MoreHorizontal size={20} />
       </div>
 
-
       <Folder title='Projetos' reference="/projects">
         {projects?.map(({ default_branch, name }) => (
-          <File href={`/projects/${name}/${default_branch}`} icon={<FileType2 size={15} />} title={name + '.md'} className='pl-10' />
+          <File href={`/projects/${default_branch}/${name}`} icon={<FileIcon size={15} src='markdown' />} title={`${name}.md`} className='pl-10' />
         ))}
       </Folder>
+
+      <File href={`/aboutMe`} icon={<FileIcon size={15} src='html' />} title={'sobreMim.html'} className='pl-7' />
+      <File href={`/techs`} icon={<FileIcon size={15} src='typescript' />} title={'tecnologias.ts'} className='pl-7' />
+      <File href={`/`} icon={<FileIcon size={15} src='javascript' />} title={'index.js'} className='pl-7' />
 
     </nav>
   )
