@@ -2,7 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .shiki {
+    background-color: transparent !important;
+  }
+}
 
-.div {
-  color: #3a355e;
+
+#shiki-code code {
+  counter-reset: step;
+  counter-increment: step 0;
+}
+
+#shiki-code code .line::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 1rem;
+  margin-right: 1.5rem;
+  display: inline-block;
+  text-align: right;
+  color: #8F8CA8;
 }
