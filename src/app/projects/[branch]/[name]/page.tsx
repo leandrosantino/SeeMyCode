@@ -16,7 +16,10 @@ export default async function Test({ params: { branch, name } }: {
   }
 
   return (
-    <div className={`
+    <div
+      className='relative'
+    >
+      <div className={`
       w-full
       absolute
       inset-0
@@ -26,11 +29,12 @@ export default async function Test({ params: { branch, name } }: {
       scrollbar-thumb-app-400
       scrollbar-track-transparent
       flex justify-center
-      py-10
+      pb-10
     `}>
-      <RenderMD>
-        {data}
-      </RenderMD>
+        <RenderMD>
+          {data}
+        </RenderMD>
+      </div>
     </div>
   )
 }

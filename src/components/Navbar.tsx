@@ -1,8 +1,7 @@
-import { MoreHorizontal, FileType2 } from 'lucide-react'
+import { MoreHorizontal } from 'lucide-react'
 import { Folder } from './Folder'
 import { File } from './File'
 import axios from 'axios'
-import Image from 'next/image'
 import { FileIcon } from './FIleIcon'
 
 interface Project {
@@ -14,7 +13,7 @@ export async function Navbar() {
 
   const { data: projects } = await axios.get<Project[]>('https://api.github.com/users/leandrosantino/repos', {
     headers: {
-      Authorization: 'Bearer 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'
+      Authorization: 'Bearer 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'
     }
   })
 
@@ -23,7 +22,7 @@ export async function Navbar() {
       className='bg-app-800 h-full'
     >
       <div
-        className="text-xs h-7 px-4 mb-2 bg-app-700 flex items-center justify-between"
+        className="text-xs h-8 px-4 mb-2 bg-app-700 flex items-center justify-between"
       >
         <div
           className='h-full flex items-center'

@@ -27,7 +27,8 @@ module.exports = {
         editor: '3rem 13rem 1fr'
       },
       gridTemplateRows: {
-        editor: '1.75rem 1fr 1.5rem'
+        editor: '1.75rem 1fr 1.5rem',
+        codeviewer: '2rem 1fr'
       }
     }
 

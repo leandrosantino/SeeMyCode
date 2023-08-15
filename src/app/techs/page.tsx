@@ -1,4 +1,4 @@
-import shiki from 'shiki'
+import { Codeviewer } from "@/components/Codeviewer"
 
 const code = `
 
@@ -48,29 +48,9 @@ export myTechs
 //
 `.trim()
 
-export default async function Techs() {
-
-  const highlighter = await shiki.getHighlighter({
-    theme: 'dark-plus',
-  })
-
-  const html = highlighter.codeToHtml(code, { lang: 'js' })
+export default function Techs() {
 
   return (
-    <div
-      className='
-        w-full
-        absolute
-        inset-0
-        overflow-x-auto
-        leading-relaxed
-        scrollbar
-        scrollbar-thumb-app-400
-        scrollbar-track-transparent
-        px-2
-      '
-      id="shiki-code"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+    <Codeviewer {...{ code }} />
   )
 }
