@@ -13,7 +13,7 @@ export async function Navbar() {
 
   const { data: projects } = await axios.get<Project[]>('https://api.github.com/users/leandrosantino/repos', {
     headers: {
-      Authorization: 'Bearer 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'
+      Authorization: `Bearer ${process.env.GITHUB}`
     }
   })
 
