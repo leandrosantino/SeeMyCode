@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { RenderMD } from '@/components/RenderMD'
 
+export const revalidate = 3600
+
 export default async function Test({ params: { branch, name } }: {
   params: {
     name: string

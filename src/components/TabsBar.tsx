@@ -27,7 +27,7 @@ export function TabsBar() {
 
     setInfo(PATHS[pathname as keyof typeof PATHS])
 
-  }, [pathname])
+  }, [pathname, params.name])
 
   return (
     <div

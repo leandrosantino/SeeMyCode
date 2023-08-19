@@ -30,6 +30,7 @@ export default function RootLayout({
             <Navbar />
             <section className='grid grid-rows-codeviewer gap-1' >
               <TabsBar />
+              {/* <div></div> */}
               {children}
             </section>
           </section>

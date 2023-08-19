@@ -26,7 +26,7 @@ export function Folder({ children, title, className, reference }: FolderProps) {
       }
       setOpen(pathname.startsWith(reference.toString()))
     }
-  }, [pathname])
+  }, [pathname, reference])
 
 
   return (

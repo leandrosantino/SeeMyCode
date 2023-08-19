@@ -25,7 +25,6 @@ export function RenderMD({ children }: { children: string }) {
             const match = /language-(\w+)/.exec(className || '')
             return !inline && match ? (
               <SyntaxHighlighter
-                children={String(children).replace(/\n$/, '')}
                 {...props}
                 style={theme}
                 language={match[1]}
@@ -33,7 +32,9 @@ export function RenderMD({ children }: { children: string }) {
                 customStyle={{
                   backgroundColor: 'transparent'
                 }}
-              />
+              >
+                {String(children).replace(/\n$/, '')}
+              </SyntaxHighlighter>
             ) : (
               <code {...props} className={className}>
                 {children}
