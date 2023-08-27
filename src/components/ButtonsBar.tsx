@@ -1,3 +1,6 @@
+'use client'
+
+import { useMenu } from '@/hooks/useMenu';
 import { Files, Search, Share2, Bug, Monitor, FlaskConical, User, Settings, Menu } from 'lucide-react';
 import { twMerge } from 'tailwind-merge'
 
@@ -7,13 +10,18 @@ const className = {
 }
 
 export function ButtonsBar() {
+
+  const menu = useMenu()
+
   return (
     <aside
       className='h-full flex flex-col gap-3 justify-between'
     >
       <div className={className.iconCase}>
         <div className={twMerge(className.icon, 'p-0 mt-1')}>
-          <Menu strokeWidth={1.5} size={20} />
+          <button onClick={() => menu.setShow(!menu.show)} >
+            <Menu strokeWidth={1.5} size={20} />
+          </button>
         </div>
         <div data-select='on' className={className.icon}>
           <Files strokeWidth={1.5} size={25} />

@@ -19,7 +19,7 @@ export default async function Test({ params: { branch, name } }: {
 
   return (
     <div
-      className='relative'
+      className='w-full relative'
     >
       <div className={`
       w-full
@@ -31,6 +31,7 @@ export default async function Test({ params: { branch, name } }: {
       scrollbar-thumb-app-400
       scrollbar-track-transparent
       flex justify-center
+      p-4
       pb-10
     `}>
         <RenderMD>

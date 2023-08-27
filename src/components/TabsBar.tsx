@@ -31,7 +31,7 @@ export function TabsBar() {
 
   return (
     <div
-      className='w-full bg-app-500 z-50'
+      className='w-full bg-app-500 z-30'
     >
       <div
         className='h-full min-w-36 w-fit bg-app-400 flex justify-between items-center gap-2 text-xs p-2 border-t border-app-200'

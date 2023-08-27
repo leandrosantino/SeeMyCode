@@ -9,6 +9,7 @@ export function RenderMD({ children }: { children: string }) {
   return (
     <div
       className={`
+        w-full
         text-slate-200
         prose prose-violet prose-invert
         prose-h1:border-b-2
@@ -17,6 +18,7 @@ export function RenderMD({ children }: { children: string }) {
         prose-h2:border-slate-800
         prose-h1:py-1
         prose-h2:py-1
+        max-md:text-sm
       `}
     >
       <ReactMD
