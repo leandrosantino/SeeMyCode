@@ -14,8 +14,8 @@ export function RenderMD({ children }: { children: string }) {
         prose prose-violet prose-invert
         prose-h1:border-b-2
         prose-h2:border-b-2
-        prose-h1:border-slate-800
-        prose-h2:border-slate-800
+        prose-h1:border-app-700
+        prose-h2:border-app-700
         prose-h1:py-1
         prose-h2:py-1
         max-md:text-sm
