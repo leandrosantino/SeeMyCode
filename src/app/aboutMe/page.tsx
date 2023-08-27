@@ -1,11 +1,11 @@
-import { Codeviewer } from "@/components/Codeviewer"
+import { MdContainer } from "@/components/MdContainer"
 import axios from "axios"
 
 export default async function AboutMe() {
 
-  const { data: code } = await axios.get<string>('https://raw.githubusercontent.com/leandrosantino/SeeMyCode/dev/public/aboutMe.md')
+  const { data } = await axios.get<string>('https://raw.githubusercontent.com/leandrosantino/SeeMyCode/dev/public/aboutMe.md')
 
   return (
-    <Codeviewer {...{ code }} />
+    <MdContainer {...{ data }} />
   )
 }

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { RenderMD } from '@/components/RenderMD'
+import { MdContainer } from '@/components/MdContainer'
 
 export const revalidate = 3600
 
@@ -18,26 +19,6 @@ export default async function Test({ params: { branch, name } }: {
   }
 
   return (
-    <div
-      className='w-full relative'
-    >
-      <div className={`
-      w-full
-      absolute
-      inset-0
-      overflow-x-auto
-      leading-relaxed
-      scrollbar
-      scrollbar-thumb-app-400
-      scrollbar-track-transparent
-      flex justify-center
-      p-4
-      pb-10
-    `}>
-        <RenderMD>
-          {data}
-        </RenderMD>
-      </div>
-    </div>
+    <MdContainer {...{ data }} />
   )
 }
