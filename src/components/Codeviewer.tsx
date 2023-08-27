@@ -28,7 +28,7 @@ export async function Codeviewer({ code }: CodeviewerProps) {
         scrollbar-thumb-app-400
         scrollbar-track-transparent
         px-2
-        text-lg
+        max-md:text-sm
       '
         id="shiki-code"
         dangerouslySetInnerHTML={{ __html: html }}

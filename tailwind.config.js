@@ -24,7 +24,8 @@ module.exports = {
 
       },
       gridTemplateColumns: {
-        editor: '3rem 13rem 1fr'
+        'editor-menuOn': '3rem 13rem 1fr',
+        'editor-menuOff': '3rem 1fr'
       },
       gridTemplateRows: {
         editor: '1.75rem 1fr 1.5rem',
