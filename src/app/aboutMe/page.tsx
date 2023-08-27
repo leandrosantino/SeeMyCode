@@ -1,5 +1,11 @@
-export default function AboutMe() {
+import { Codeviewer } from "@/components/Codeviewer"
+import axios from "axios"
+
+export default async function AboutMe() {
+
+  const { data: code } = await axios.get<string>('https://raw.githubusercontent.com/leandrosantino/SeeMyCode/dev/public/aboutMe.md')
+
   return (
-    <div>Teste 2</div>
+    <Codeviewer {...{ code }} />
   )
 }
