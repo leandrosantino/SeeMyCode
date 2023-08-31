@@ -5,7 +5,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula as theme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
-export function RenderMD({ children, projectName }: { children: string, projectName: string }) {
+export function RenderMD({ children }: { children: string }) {
   return (
     <div
       className={`
