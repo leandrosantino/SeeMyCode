@@ -23,3 +23,13 @@
   text-align: right;
   color: #8F8CA8;
 }
+
+.imageParagraph>p:has(img) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.imageParagraph>p:has(img) img {
+  margin: .8rem 0;
+}
