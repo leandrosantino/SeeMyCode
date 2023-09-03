@@ -48,7 +48,7 @@ export function Explorer() {
 
         <Folder title='Projetos' reference="/projects">
           {projects?.map(({ default_branch, name }) => (
-            <File key={name} href={`/projects/${default_branch}/${name}`} icon={<FileIcon size={15} src='markdown' />} title={`${name}.md`} className='pl-10' />
+            <File key={name} href={`/projects/${default_branch}/${name}`} icon={<FileIcon size={15} src='markdown' />} title={`${name.toLowerCase()}.md`} className='pl-10' />
           ))}
         </Folder>
 

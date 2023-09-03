@@ -40,7 +40,7 @@ export function TabsBar() {
           className='flex gap-1 text-app-100'
         >
           <FileIcon size={15} src={info?.lang as string} />
-          {info?.name}
+          {info?.name.toLowerCase()}
         </div>
         <button
           className='p-0.5 rounded bg-app-400 hover:bg-white hover:bg-opacity-20 text-app-100'
